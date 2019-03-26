@@ -1,0 +1,6 @@
+*.iml
+icaovalidationjavabridge/requirements.txt
+icaovalidationjavabridge/.idea/
+*.class
+.idea/
+target/
