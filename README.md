@@ -28,7 +28,7 @@ A Java wrapper built to expose Python based validation-api functions to JAVA pro
             validator = new ICAOValidator("path/to/.ini");
             ImageDecision decision = validator.icaoValidate("path/to/image");
             Map<String, ImageDecision.Property> map = decision.getPropertyMap();
-            ImageDecision.Property property = map.get("ImageDecision propert key");
+            ImageDecision.Property property = map.get("ImageDecision property key");
             System.out.println(property.getIsValid());
             System.out.println(property.getName());
         } catch (IOException e) {
