@@ -13,7 +13,13 @@ A Java wrapper built to expose Python based validation-api functions to JAVA pro
 * Add the icao-wrapper dependency to your pom.xml
 
 # Dependency (Maven)
-
+```xml
+        <dependency>
+            <groupId>com.sf</groupId>
+            <artifactId>icao-validation-java-bridge</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+```
 
 # How to use the Icao-Wrapper Library
 ```java
