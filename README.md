@@ -12,10 +12,10 @@ A Java wrapper built to expose Python based validation-api functions to JAVA pro
 * Run this command to install all required Python packages: pip install -r requirements.txt
 * Add the icao-wrapper dependency to your pom.xml
 
-#Dependency (Maven)
+# Dependency (Maven)
 
 
-#How to use the Icao-Wrapper Library
+# How to use the Icao-Wrapper Library
 ```java
         ICAOValidator validator = null;
         try {
