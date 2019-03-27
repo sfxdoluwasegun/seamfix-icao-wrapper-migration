@@ -6,6 +6,7 @@ A Java wrapper built to expose Python based validation-api functions to JAVA pro
 - Java Embedded Python (JEP)
 
 # How to set up your Environment for the Library
+* Download and install Microsoft Visual Build tools 2015 (V14)
 * Download and install Python 
 * Download the requirements.txt from the root of this project
 * Cd to the path of the requirements.txt
