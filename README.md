@@ -37,3 +37,17 @@ A Java wrapper built to expose Python based validation-api functions to JAVA pro
             e.printStackTrace();
         }
 ```
+
+# ImageDecision property keys
+* BACKGROUND_LIGHT
+* BRIGHTNESS_CONTRAST
+* EYE_GLASS
+* FACE_ALIGNED
+* FACE_BLUR
+* FACE_CENTERED
+* FACE_COVERED
+* IMAGE_DIMENSION
+* RED_EYE_DETECT
+* SHADOW_DETECTION
+* SHOULDER_EXISTS
+* SKIN_TONE
