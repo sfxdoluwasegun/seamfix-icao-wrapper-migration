@@ -27,7 +27,7 @@ public class ImageDecision {
             JSONObject jsonObject = new JSONObject(json);
 
             JSONObject property = jsonObject.optJSONObject("IMAGE_DIMENSION");
-            String name = property.optString("PROPERTY");
+            String name = "IMAGE_DIMENSION";
             String message = property.optString("MESSAGE");
             boolean isValid = property.optBoolean("VALID");
             String value = property.optString("VALUE");
@@ -35,7 +35,7 @@ public class ImageDecision {
             propertyMap.put(name, newProperty);
 
             property = jsonObject.optJSONObject("BRIGHTNESS_CONTRAST");
-            name = property.optString("PROPERTY");
+            name = "BRIGHTNESS_CONTRAST";
             message = property.optString("MESSAGE");
             isValid = property.optBoolean("VALID");
             value = property.optString("VALUE");
@@ -43,7 +43,7 @@ public class ImageDecision {
             propertyMap.put(name, newProperty);
 
             property = jsonObject.optJSONObject("FACE_BLUR");
-            name = property.optString("PROPERTY");
+            name = "FACE_BLUR";
             message = property.optString("MESSAGE");
             isValid = property.optBoolean("VALID");
             value = property.optString("VALUE");
@@ -51,7 +51,7 @@ public class ImageDecision {
             propertyMap.put(name, newProperty);
 
             property = jsonObject.optJSONObject("SKIN_TONE");
-            name = property.optString("PROPERTY");
+            name = "SKIN_TONE";
             message = property.optString("MESSAGE");
             isValid = property.optBoolean("VALID");
             value = property.getString("VALUE");
@@ -59,7 +59,7 @@ public class ImageDecision {
             propertyMap.put(name, newProperty);
 
             property = jsonObject.optJSONObject("FACE_ALIGNED");
-            name = property.optString("PROPERTY");
+            name = "FACE_ALIGNED";
             message = property.optString("MESSAGE");
             isValid = property.optBoolean("VALID");
             value = property.optString("VALUE");
@@ -67,7 +67,7 @@ public class ImageDecision {
             propertyMap.put(name, newProperty);
 
             property = jsonObject.optJSONObject("SHOULDER_EXISTS");
-            name = property.optString("PROPERTY");
+            name = "SHOULDER_EXISTS";
             message = property.optString("MESSAGE");
             isValid = property.optBoolean("VALID");
             value = property.optString("VALUE");
@@ -75,23 +75,23 @@ public class ImageDecision {
             propertyMap.put(name, newProperty);
 
             property = jsonObject.optJSONObject("FACE_CENTERED");
-            name = property.optString("PROPERTY");
+            name = "FACE_CENTERED";
             message = property.optString("MESSAGE");
             isValid = property.optBoolean("VALID");
             value = property.optString("VALUE");
             newProperty = new Property(name, message, isValid, value);
             propertyMap.put(name, newProperty);
 
-//            property = jsonObject.optJSONObject("EYE_GLASS");
-//            name = property.getString("PROPERTY");
-//            message = property.getString("MESSAGE");
-//            isValid = property.getBoolean("VALID");
-//            value = property.getString("VALUE");
-//            newProperty = new Property(name, message, isValid, value);
-//            propertyMap.put(name, newProperty);
+            property = jsonObject.optJSONObject("EYE_GLASS");
+            name = "EYE_GLASS";
+            message = property.getString("MESSAGE");
+            isValid = property.getBoolean("VALID");
+            value = property.getString("VALUE");
+            newProperty = new Property(name, message, isValid, value);
+            propertyMap.put(name, newProperty);
 
             property = jsonObject.optJSONObject("FACE_COVERED");
-            name = property.optString("PROPERTY");
+            name = "FACE_COVERED";
             message = property.optString("MESSAGE");
             isValid = property.optBoolean("VALID");
             value = property.optString("VALUE");
@@ -99,7 +99,7 @@ public class ImageDecision {
             propertyMap.put(name, newProperty);
 
             property = jsonObject.optJSONObject("FACE_COUNT");
-            name = property.optString("PROPERTY");
+            name ="FACE_COUNT";
             message = property.optString("MESSAGE");
             isValid = property.optBoolean("VALID");
             value = property.optString("VALUE");
