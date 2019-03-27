@@ -71,12 +71,14 @@ public class ICAOValidator {
      * @throws IOException
      */
     private void loadClassifierAndResources(String path) throws IOException {
-        if (new File(path).exists()) {
-            try {
-                JEP.eval("classifierConfig = load_classifier_config(r'" + path + "')");
-            } catch (JepException e) {
-                throw new IOException(e.getMessage());
-            }
+        if (!new File(path).exists()) {
+            throw new IOException("Please specify a path to the .ini file");
+        }
+
+        try {
+            JEP.eval("classifierConfig = load_classifier_config(r'" + path + "')");
+        } catch (JepException e) {
+            throw new IOException(e.getMessage());
         }
     }
 
@@ -115,7 +117,6 @@ public class ICAOValidator {
                 return new ImageDecision(json);
             }
         } catch (JepException e) {
-            e.printStackTrace();
             throw new IOException(e.getMessage());
         }
         return new NulImageDecision("");
