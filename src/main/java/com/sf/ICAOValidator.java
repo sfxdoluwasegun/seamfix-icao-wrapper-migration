@@ -36,7 +36,6 @@ public class ICAOValidator {
                 JEP = new Jep();
                 importPythonPackages();
                 loadClassifierAndResources(path);
-                setFeatureThreshold();
             } catch (JepException e) {
                 throw new IOException(e.getMessage());
             }
@@ -83,23 +82,6 @@ public class ICAOValidator {
     }
 
     /**
-     * This method sets all the threshold values needed for ICAO Validation
-     *
-     * @throws IOException
-     */
-    private void setFeatureThreshold() throws IOException {
-        try {
-            JEP.eval("loader = FeatureThreshold.FeatureThreshold()");
-            JEP.eval("faceThreshold = loader.makeThreshold(1.1, 2, 2, 96, 96, 0, 0, True)");
-            JEP.eval("eyeThreshold = loader.makeThreshold(1.1, 5, 2, 70, 70, 96, 96, True)");
-            JEP.eval("noseThreshold = loader.makeThreshold(1.1, 5, 2, 64, 64, 100, 100, True)");
-            JEP.eval("clusterThreshold = loader.makeClutterThreshold(50, 500, 90, 40, 40)");
-        } catch (JepException e) {
-            throw new IOException(e.getMessage());
-        }
-    }
-
-    /**
      * This method performs the ICAO Validation
      *
      * @param path to the Image for Icao Validation
@@ -109,8 +91,7 @@ public class ICAOValidator {
     public ImageDecision icaoValidate(String path) throws IOException {
         try {
             if (new File(path).exists()) {
-                JEP.eval("image = cv2.imread(r'" + path + "')");
-                JEP.eval("validation = CoreValidation(image, classifierConfig, faceThreshold=faceThreshold, backgroundThreshold=clusterThreshold)");
+                JEP.eval("validation = CoreValidation(classifierConfig)");
                 JEP.eval("icao_validation = validation.icao_validate(r'" + path + "')");
                 JEP.eval("jsonString = json.dumps(icao_validation)");
                 String json = String.valueOf(JEP.getValue("jsonString"));
