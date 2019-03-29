@@ -13,7 +13,6 @@ A Java wrapper built to expose Python based validation-api functions to JAVA pro
 * Download the requirements.txt from the root of this project
 * Cd to the path of the requirements.txt
 * Run this command to install all required Python packages: ```pip install -r requirements.txt```
-* Locate the Jep.jar file in the site-packages folder under the Python dir in your working ennvironment
 * Add the icao-wrapper dependency to your pom.xml
 
 # Dependency (Maven)
@@ -23,6 +22,10 @@ A Java wrapper built to expose Python based validation-api functions to JAVA pro
             <artifactId>icao-validation-java-bridge</artifactId>
             <version>1.0.0-SNAPSHOT</version>
         </dependency>
+```
+
+```groovy
+        implementation 'com.sf:icao-validation-java-bridge:1.0.0-SNAPSHOT'
 ```
 
 # How to use the Icao-Wrapper Library
