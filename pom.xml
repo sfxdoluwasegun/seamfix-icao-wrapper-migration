@@ -52,7 +52,7 @@
     <repositories>
 
         <repository>
-            <id>nexus</id>
+            <id>nexus-ops</id>
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>
@@ -61,7 +61,7 @@
             </releases>
             <url>http://nexus.seamfix.com/nexus/content/repositories/ops</url>
         </repository>
-        
+
         <repository>
             <id>nexus</id>
             <snapshots>
