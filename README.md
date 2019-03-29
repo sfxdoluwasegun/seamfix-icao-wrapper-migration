@@ -6,11 +6,12 @@ A Java wrapper built to expose Python based validation-api functions to JAVA pro
 - Java Embedded Python (JEP)
 
 # How to set up your Environment for the Library
+* Download and install [Microsoft Visual Build Tools for Visual Studio 2015](https://www.microsoft.com/en-us/download/details.aspx?id=48159)
 * Download and install [Visual C++ Redistributable for Visual Studio 2015](https://www.microsoft.com/en-us/download/details.aspx?id=48145)
 * Download and install [Python](https://www.python.org/downloads/)
 * Download the requirements.txt from the root of this project
 * Cd to the path of the requirements.txt
-* Run this command to install all required Python packages: pip install -r requirements.txt
+* Run this command to install all required Python packages: ```pip install -r requirements.txt```
 * Locate the Jep.jar file in the site-packages folder under the Python dir in your working ennvironment
 * Add the icao-wrapper dependency to your pom.xml
 
