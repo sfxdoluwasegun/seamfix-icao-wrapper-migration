@@ -23,7 +23,7 @@ A Java wrapper built to expose Python based validation-api functions to JAVA pro
             <version>1.0.0-SNAPSHOT</version>
         </dependency>
 ```
-
+# Dependency (Maven)
 ```groovy
         implementation 'com.sf:icao-validation-java-bridge:1.0.0-SNAPSHOT'
 ```
