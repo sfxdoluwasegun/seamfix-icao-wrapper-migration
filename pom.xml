@@ -29,6 +29,11 @@
             <version>20180813</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.sf.icao-jep</groupId>
+            <artifactId>jep</artifactId>
+            <version>3.8.2</version>
+        </dependency>
     </dependencies>
 
     <distributionManagement>
@@ -46,6 +51,17 @@
 
     <repositories>
 
+        <repository>
+            <id>nexus</id>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <url>http://nexus.seamfix.com/nexus/content/repositories/ops</url>
+        </repository>
+        
         <repository>
             <id>nexus</id>
             <snapshots>
