@@ -59,7 +59,7 @@
             <releases>
                 <enabled>true</enabled>
             </releases>
-            <url>http://nexus.seamfix.com/nexus/content/repositories/ops</url>
+            <url>https://nexus.seamfix.com/nexus/content/groups/public</url>
         </repository>
 
     </repositories>
