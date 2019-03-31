@@ -7,7 +7,6 @@ A Java wrapper built to expose Python based validation-api functions to JAVA pro
 
 # How to set up your Environment for the Library
 * Download and install [Microsoft Visual Build Tools for Visual Studio 2015](https://www.microsoft.com/en-us/download/details.aspx?id=48159)
-* Download and install [Visual C++ Redistributable for Visual Studio 2015](https://www.microsoft.com/en-us/download/details.aspx?id=48145)
 * Download and install [Python](https://www.python.org/downloads/)
 * Download and install [CMake](https://cmake.org/download/)
 * Download the requirements.txt from the root of this project
