@@ -10,7 +10,7 @@ public class IcaoValidatorConstants {
     /**
      * keys for each Image decision
      */
-    public enum IMAGE_DECISION_KEYS{
+    public enum ImageDecisionKeys{
         IMAGE_DIMENSION,
         BRIGHTNESS_CONTRAST,
         FACE_BLUR,
@@ -28,7 +28,7 @@ public class IcaoValidatorConstants {
     /**
      * Keys for the the Image decision properties
      */
-    public enum IMAGE_DECISION_PROPERTIES {
+    public enum ImageDecisionProperties {
         MESSAGE,
         VALID,
         VALUE

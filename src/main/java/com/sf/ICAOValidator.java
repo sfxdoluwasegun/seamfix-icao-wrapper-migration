@@ -89,17 +89,22 @@ public class ICAOValidator {
      * @throws IOException
      */
     public ImageDecision icaoValidate(String path) throws IOException {
-        try {
-            if (new File(path).exists()) {
+
+        ImageDecision imageDecision = null;
+        if (new File(path).exists()) {
+            try {
                 JEP.eval("validation = CoreValidation(classifierConfig)");
                 JEP.eval("icao_validation = validation.icao_validate(r'" + path + "')");
                 JEP.eval("jsonString = json.dumps(icao_validation)");
                 String json = String.valueOf(JEP.getValue("jsonString"));
-                return new ImageDecision(json);
+                imageDecision = new ImageDecision(json);
+            } catch (JepException e) {
+                e.printStackTrace();
+                throw new IOException(e.getMessage());
             }
-        } catch (JepException e) {
-            throw new IOException(e.getMessage());
+        } else {
+            throw new IOException("Please pass in an Image");
         }
-        return new NulImageDecision("");
+        return imageDecision;
     }
 }

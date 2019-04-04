@@ -27,99 +27,99 @@ public class ImageDecision {
             System.out.println(json);
             JSONObject jsonObject = new JSONObject(json);
 
-            JSONObject property = jsonObject.optJSONObject(IcaoValidatorConstants.IMAGE_DECISION_KEYS.IMAGE_DIMENSION.name());
-            String name = IcaoValidatorConstants.IMAGE_DECISION_KEYS.IMAGE_DIMENSION.name();
-            String message = property.optString(IcaoValidatorConstants.IMAGE_DECISION_PROPERTIES.MESSAGE.name());
-            boolean isValid = property.optBoolean(IcaoValidatorConstants.IMAGE_DECISION_PROPERTIES.VALID.name());
-            String value = property.optString(IcaoValidatorConstants.IMAGE_DECISION_PROPERTIES.VALUE.name());
+            JSONObject property = jsonObject.optJSONObject(IcaoValidatorConstants.ImageDecisionKeys.IMAGE_DIMENSION.name());
+            String name = IcaoValidatorConstants.ImageDecisionKeys.IMAGE_DIMENSION.name();
+            String message = property.optString(IcaoValidatorConstants.ImageDecisionProperties.MESSAGE.name());
+            boolean isValid = property.optBoolean(IcaoValidatorConstants.ImageDecisionProperties.VALID.name());
+            String value = property.optString(IcaoValidatorConstants.ImageDecisionProperties.VALUE.name());
             Property newProperty = new Property(name, message, isValid, value);
             propertyMap.put(name, newProperty);
 
-            property = jsonObject.optJSONObject(IcaoValidatorConstants.IMAGE_DECISION_KEYS.BRIGHTNESS_CONTRAST.name());
-            name = IcaoValidatorConstants.IMAGE_DECISION_KEYS.BRIGHTNESS_CONTRAST.name();
-            message = property.optString(IcaoValidatorConstants.IMAGE_DECISION_PROPERTIES.MESSAGE.name());
-            isValid = property.optBoolean(IcaoValidatorConstants.IMAGE_DECISION_PROPERTIES.VALID.name());
-            value = property.optString(IcaoValidatorConstants.IMAGE_DECISION_PROPERTIES.VALUE.name());
+            property = jsonObject.optJSONObject(IcaoValidatorConstants.ImageDecisionKeys.BRIGHTNESS_CONTRAST.name());
+            name = IcaoValidatorConstants.ImageDecisionKeys.BRIGHTNESS_CONTRAST.name();
+            message = property.optString(IcaoValidatorConstants.ImageDecisionProperties.MESSAGE.name());
+            isValid = property.optBoolean(IcaoValidatorConstants.ImageDecisionProperties.VALID.name());
+            value = property.optString(IcaoValidatorConstants.ImageDecisionProperties.VALUE.name());
             newProperty = new Property(name, message, isValid, value);
             propertyMap.put(name, newProperty);
 
-            property = jsonObject.optJSONObject(IcaoValidatorConstants.IMAGE_DECISION_KEYS.FACE_BLUR.name());
-            name = IcaoValidatorConstants.IMAGE_DECISION_KEYS.FACE_BLUR.name();
-            message = property.optString(IcaoValidatorConstants.IMAGE_DECISION_PROPERTIES.MESSAGE.name());
-            isValid = property.optBoolean(IcaoValidatorConstants.IMAGE_DECISION_PROPERTIES.VALID.name());
-            value = property.optString(IcaoValidatorConstants.IMAGE_DECISION_PROPERTIES.VALUE.name());
+            property = jsonObject.optJSONObject(IcaoValidatorConstants.ImageDecisionKeys.FACE_BLUR.name());
+            name = IcaoValidatorConstants.ImageDecisionKeys.FACE_BLUR.name();
+            message = property.optString(IcaoValidatorConstants.ImageDecisionProperties.MESSAGE.name());
+            isValid = property.optBoolean(IcaoValidatorConstants.ImageDecisionProperties.VALID.name());
+            value = property.optString(IcaoValidatorConstants.ImageDecisionProperties.VALUE.name());
             newProperty = new Property(name, message, isValid, value);
             propertyMap.put(name, newProperty);
 
-            property = jsonObject.optJSONObject(IcaoValidatorConstants.IMAGE_DECISION_KEYS.SKIN_TONE.name());
-            name = IcaoValidatorConstants.IMAGE_DECISION_KEYS.SKIN_TONE.name();
-            message = property.optString(IcaoValidatorConstants.IMAGE_DECISION_PROPERTIES.MESSAGE.name());
-            isValid = property.optBoolean(IcaoValidatorConstants.IMAGE_DECISION_PROPERTIES.VALID.name());
-            value = property.optString(IcaoValidatorConstants.IMAGE_DECISION_PROPERTIES.VALUE.name());
+            property = jsonObject.optJSONObject(IcaoValidatorConstants.ImageDecisionKeys.SKIN_TONE.name());
+            name = IcaoValidatorConstants.ImageDecisionKeys.SKIN_TONE.name();
+            message = property.optString(IcaoValidatorConstants.ImageDecisionProperties.MESSAGE.name());
+            isValid = property.optBoolean(IcaoValidatorConstants.ImageDecisionProperties.VALID.name());
+            value = property.optString(IcaoValidatorConstants.ImageDecisionProperties.VALUE.name());
             newProperty = new Property(name, message, isValid, value);
             propertyMap.put(name, newProperty);
 
-            property = jsonObject.optJSONObject(IcaoValidatorConstants.IMAGE_DECISION_KEYS.FACE_ALIGNED.name());
-            name = IcaoValidatorConstants.IMAGE_DECISION_KEYS.FACE_ALIGNED.name();
-            message = property.optString(IcaoValidatorConstants.IMAGE_DECISION_PROPERTIES.MESSAGE.name());
-            isValid = property.optBoolean(IcaoValidatorConstants.IMAGE_DECISION_PROPERTIES.VALID.name());
-            value = property.optString(IcaoValidatorConstants.IMAGE_DECISION_PROPERTIES.VALUE.name());
+            property = jsonObject.optJSONObject(IcaoValidatorConstants.ImageDecisionKeys.FACE_ALIGNED.name());
+            name = IcaoValidatorConstants.ImageDecisionKeys.FACE_ALIGNED.name();
+            message = property.optString(IcaoValidatorConstants.ImageDecisionProperties.MESSAGE.name());
+            isValid = property.optBoolean(IcaoValidatorConstants.ImageDecisionProperties.VALID.name());
+            value = property.optString(IcaoValidatorConstants.ImageDecisionProperties.VALUE.name());
             newProperty = new Property(name, message, isValid, value);
             propertyMap.put(name, newProperty);
 
-            property = jsonObject.optJSONObject(IcaoValidatorConstants.IMAGE_DECISION_KEYS.SHOULDER_CHECK.name());
-            name = IcaoValidatorConstants.IMAGE_DECISION_KEYS.SHOULDER_CHECK.name();
-            message = property.optString(IcaoValidatorConstants.IMAGE_DECISION_PROPERTIES.MESSAGE.name());
-            isValid = property.optBoolean(IcaoValidatorConstants.IMAGE_DECISION_PROPERTIES.VALID.name());
-            value = property.optString(IcaoValidatorConstants.IMAGE_DECISION_PROPERTIES.VALUE.name());
+            property = jsonObject.optJSONObject(IcaoValidatorConstants.ImageDecisionKeys.SHOULDER_CHECK.name());
+            name = IcaoValidatorConstants.ImageDecisionKeys.SHOULDER_CHECK.name();
+            message = property.optString(IcaoValidatorConstants.ImageDecisionProperties.MESSAGE.name());
+            isValid = property.optBoolean(IcaoValidatorConstants.ImageDecisionProperties.VALID.name());
+            value = property.optString(IcaoValidatorConstants.ImageDecisionProperties.VALUE.name());
             newProperty = new Property(name, message, isValid, value);
             propertyMap.put(name, newProperty);
 
-            property = jsonObject.optJSONObject(IcaoValidatorConstants.IMAGE_DECISION_KEYS.SHADOW_DETECTION.name());
-            name = IcaoValidatorConstants.IMAGE_DECISION_KEYS.SHADOW_DETECTION.name();
-            message = property.optString(IcaoValidatorConstants.IMAGE_DECISION_PROPERTIES.MESSAGE.name());
-            isValid = property.optBoolean(IcaoValidatorConstants.IMAGE_DECISION_PROPERTIES.VALID.name());
-            value = property.optString(IcaoValidatorConstants.IMAGE_DECISION_PROPERTIES.VALUE.name());
+            property = jsonObject.optJSONObject(IcaoValidatorConstants.ImageDecisionKeys.SHADOW_DETECTION.name());
+            name = IcaoValidatorConstants.ImageDecisionKeys.SHADOW_DETECTION.name();
+            message = property.optString(IcaoValidatorConstants.ImageDecisionProperties.MESSAGE.name());
+            isValid = property.optBoolean(IcaoValidatorConstants.ImageDecisionProperties.VALID.name());
+            value = property.optString(IcaoValidatorConstants.ImageDecisionProperties.VALUE.name());
             newProperty = new Property(name, message, isValid, value);
             propertyMap.put(name, newProperty);
 
-            property = jsonObject.optJSONObject(IcaoValidatorConstants.IMAGE_DECISION_KEYS.FACE_CENTERED.name());
-            name = IcaoValidatorConstants.IMAGE_DECISION_KEYS.FACE_CENTERED.name();
-            message = property.optString(IcaoValidatorConstants.IMAGE_DECISION_PROPERTIES.MESSAGE.name());
-            isValid = property.optBoolean(IcaoValidatorConstants.IMAGE_DECISION_PROPERTIES.VALID.name());
-            value = property.optString(IcaoValidatorConstants.IMAGE_DECISION_PROPERTIES.VALUE.name());
+            property = jsonObject.optJSONObject(IcaoValidatorConstants.ImageDecisionKeys.FACE_CENTERED.name());
+            name = IcaoValidatorConstants.ImageDecisionKeys.FACE_CENTERED.name();
+            message = property.optString(IcaoValidatorConstants.ImageDecisionProperties.MESSAGE.name());
+            isValid = property.optBoolean(IcaoValidatorConstants.ImageDecisionProperties.VALID.name());
+            value = property.optString(IcaoValidatorConstants.ImageDecisionProperties.VALUE.name());
             newProperty = new Property(name, message, isValid, value);
             propertyMap.put(name, newProperty);
 
-            property = jsonObject.optJSONObject(IcaoValidatorConstants.IMAGE_DECISION_KEYS.EYE_IN_GLASSES.name());
-            name = IcaoValidatorConstants.IMAGE_DECISION_KEYS.EYE_IN_GLASSES.name();
-            message = property.optString(IcaoValidatorConstants.IMAGE_DECISION_PROPERTIES.MESSAGE.name());
-            isValid = property.optBoolean(IcaoValidatorConstants.IMAGE_DECISION_PROPERTIES.VALID.name());
-            value = property.optString(IcaoValidatorConstants.IMAGE_DECISION_PROPERTIES.VALUE.name());
+            property = jsonObject.optJSONObject(IcaoValidatorConstants.ImageDecisionKeys.EYE_IN_GLASSES.name());
+            name = IcaoValidatorConstants.ImageDecisionKeys.EYE_IN_GLASSES.name();
+            message = property.optString(IcaoValidatorConstants.ImageDecisionProperties.MESSAGE.name());
+            isValid = property.optBoolean(IcaoValidatorConstants.ImageDecisionProperties.VALID.name());
+            value = property.optString(IcaoValidatorConstants.ImageDecisionProperties.VALUE.name());
             newProperty = new Property(name, message, isValid, value);
             propertyMap.put(name, newProperty);
 
-            property = jsonObject.optJSONObject(IcaoValidatorConstants.IMAGE_DECISION_KEYS.FACE_COVERED.name());
-            name = IcaoValidatorConstants.IMAGE_DECISION_KEYS.FACE_COVERED.name();
-            message = property.optString(IcaoValidatorConstants.IMAGE_DECISION_PROPERTIES.MESSAGE.name());
-            isValid = property.optBoolean(IcaoValidatorConstants.IMAGE_DECISION_PROPERTIES.VALID.name());
-            value = property.optString(IcaoValidatorConstants.IMAGE_DECISION_PROPERTIES.VALUE.name());
+            property = jsonObject.optJSONObject(IcaoValidatorConstants.ImageDecisionKeys.FACE_COVERED.name());
+            name = IcaoValidatorConstants.ImageDecisionKeys.FACE_COVERED.name();
+            message = property.optString(IcaoValidatorConstants.ImageDecisionProperties.MESSAGE.name());
+            isValid = property.optBoolean(IcaoValidatorConstants.ImageDecisionProperties.VALID.name());
+            value = property.optString(IcaoValidatorConstants.ImageDecisionProperties.VALUE.name());
             newProperty = new Property(name, message, isValid, value);
             propertyMap.put(name, newProperty);
 
-            property = jsonObject.optJSONObject(IcaoValidatorConstants.IMAGE_DECISION_KEYS.FACE_COUNT.name());
-            name = IcaoValidatorConstants.IMAGE_DECISION_KEYS.FACE_COUNT.name();
-            message = property.optString(IcaoValidatorConstants.IMAGE_DECISION_PROPERTIES.MESSAGE.name());
-            isValid = property.optBoolean(IcaoValidatorConstants.IMAGE_DECISION_PROPERTIES.VALID.name());
-            value = property.optString(IcaoValidatorConstants.IMAGE_DECISION_PROPERTIES.VALUE.name());
+            property = jsonObject.optJSONObject(IcaoValidatorConstants.ImageDecisionKeys.FACE_COUNT.name());
+            name = IcaoValidatorConstants.ImageDecisionKeys.FACE_COUNT.name();
+            message = property.optString(IcaoValidatorConstants.ImageDecisionProperties.MESSAGE.name());
+            isValid = property.optBoolean(IcaoValidatorConstants.ImageDecisionProperties.VALID.name());
+            value = property.optString(IcaoValidatorConstants.ImageDecisionProperties.VALUE.name());
             newProperty = new Property(name, message, isValid, value);
             propertyMap.put(name, newProperty);
 
-            property = jsonObject.optJSONObject(IcaoValidatorConstants.IMAGE_DECISION_KEYS.RED_EYE_CHECK.name());
-            name = IcaoValidatorConstants.IMAGE_DECISION_KEYS.RED_EYE_CHECK.name();
-            message = property.optString(IcaoValidatorConstants.IMAGE_DECISION_PROPERTIES.MESSAGE.name());
-            isValid = property.optBoolean(IcaoValidatorConstants.IMAGE_DECISION_PROPERTIES.VALID.name());
-            value = property.optString(IcaoValidatorConstants.IMAGE_DECISION_PROPERTIES.VALUE.name());
+            property = jsonObject.optJSONObject(IcaoValidatorConstants.ImageDecisionKeys.RED_EYE_CHECK.name());
+            name = IcaoValidatorConstants.ImageDecisionKeys.RED_EYE_CHECK.name();
+            message = property.optString(IcaoValidatorConstants.ImageDecisionProperties.MESSAGE.name());
+            isValid = property.optBoolean(IcaoValidatorConstants.ImageDecisionProperties.VALID.name());
+            value = property.optString(IcaoValidatorConstants.ImageDecisionProperties.VALUE.name());
             newProperty = new Property(name, message, isValid, value);
             propertyMap.put(name, newProperty);
         }
@@ -174,7 +174,7 @@ public class ImageDecision {
         }
     }
 
-    public Map<String, Property> getPropertyMap() {
+    public Map<String, Property> getPropertiesMap() {
         return Collections.unmodifiableMap(propertyMap);
     }
 }
