@@ -21,6 +21,19 @@ A Java wrapper built to expose Python based validation-api functions to JAVA pro
             <artifactId>icao-validation-java-bridge</artifactId>
             <version>1.0.0-SNAPSHOT</version>
         </dependency>
+        
+        <repositories>
+
+        <repository>
+            <id>nexus</id>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <url>https://nexus.seamfix.com/nexus/content/groups/public</url>
+        </repository>
 ```
 # Dependency (Gradle)
 ```groovy
