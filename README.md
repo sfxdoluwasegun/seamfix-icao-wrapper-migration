@@ -9,6 +9,8 @@ A Java wrapper built to expose Python based validation-api functions to JAVA pro
 * Download and install Microsoft Visual Build Tools for Visual Studio 2015
 * Download and install [Python 3.6.+](https://www.python.org/downloads/)
 * Download and install [CMake](https://cmake.org/download/)
+* Download the classifier_xml directory
+* Download the jep.dll file and place it in the System32 directory of your computer
 * Download the requirements.txt from the root of this project
 * Cd to the path of the requirements.txt
 * Run this command to install all required Python packages: ```pip install -r requirements.txt```
@@ -44,7 +46,7 @@ A Java wrapper built to expose Python based validation-api functions to JAVA pro
 ```java
         ICAOValidator validator = null;
         try {
-            validator = new ICAOValidator("path/to/.ini"); // Download this from the root of this repository
+            validator = new ICAOValidator("path/to/.ini/in the classifier_xml"); // Download this from the root of this repository
             ImageDecision decision = validator.icaoValidate("path/to/image");
             Map<String, ImageDecision.Property> map = decision.getPropertyMap();
             ImageDecision.Property property = map.get("ImageDecision property key");
