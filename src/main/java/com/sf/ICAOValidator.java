@@ -85,26 +85,23 @@ public class ICAOValidator {
      * This method performs the ICAO Validation
      *
      * @param path to the Image for Icao Validation
-     * @return com.sf.ImageDecision
+     * @return String json
      * @throws IOException
      */
-    public ImageDecision icaoValidate(String path) throws IOException {
+    public String validate(String path) throws IOException {
 
-        ImageDecision imageDecision = null;
         if (new File(path).exists()) {
             try {
                 JEP.eval("validation = CoreValidation(classifierConfig)");
                 JEP.eval("icao_validation = validation.icao_validate(r'" + path + "')");
                 JEP.eval("jsonString = json.dumps(icao_validation)");
-                String json = String.valueOf(JEP.getValue("jsonString"));
-                imageDecision = new ImageDecision(json);
+                return String.valueOf(JEP.getValue("jsonString"));
             } catch (JepException e) {
                 e.printStackTrace();
                 throw new IOException(e.getMessage());
             }
         } else {
-            throw new IOException("Please pass in an Image");
+            throw new IOException("Please pass in a valid Image path");
         }
-        return imageDecision;
     }
 }
