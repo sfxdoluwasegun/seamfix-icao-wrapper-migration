@@ -19,4 +19,4 @@ scikit-learn==0.19.1
 scipy==1.1.0
 six==1.11.0
 jep==3.8.2
-icaovalidator==0.1.16
+icaovalidator==0.1.17
