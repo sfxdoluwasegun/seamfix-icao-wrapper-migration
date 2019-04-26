@@ -75,9 +75,9 @@ public class ICAOValidator {
         }
 
         try {
-            JEP.eval("classifierConfig = load_classifier_config(r'" + path + "')");
+            JEP.eval("classifierConfig, classifications = load_classifier_config(r'" + path + "')");
         } catch (JepException e) {
-            throw new IOException(e.getMessage());
+            e.printStackTrace();
         }
     }
 
@@ -92,16 +92,17 @@ public class ICAOValidator {
 
         if (new File(path).exists()) {
             try {
-                JEP.eval("validation = CoreValidation(classifierConfig)");
+                JEP.eval("validation = CoreValidation(classifierConfig = classifierConfig, classifications = classifications)");
                 JEP.eval("icao_validation = validation.icao_validate(r'" + path + "')");
                 JEP.eval("jsonString = json.dumps(icao_validation)");
                 return String.valueOf(JEP.getValue("jsonString"));
             } catch (JepException e) {
                 e.printStackTrace();
-                throw new IOException(e.getMessage());
             }
         } else {
             throw new IOException("Please pass in a valid Image path");
         }
+
+        return "";
     }
 }
