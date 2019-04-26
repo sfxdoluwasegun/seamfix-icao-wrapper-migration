@@ -18,14 +18,13 @@ A Java wrapper built to expose Python based validation-api functions to JAVA pro
 
 # Dependency (Maven)
 ```xml
-        <dependency>
-            <groupId>com.sf</groupId>
-            <artifactId>icao-validation-java-bridge</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
-        </dependency>
+    <dependency>
+        <groupId>com.sf</groupId>
+        <artifactId>icao-validation-java-bridge</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </dependency>
         
-        <repositories>
-
+    <repositories>
         <repository>
             <id>nexus</id>
             <snapshots>
@@ -36,37 +35,36 @@ A Java wrapper built to expose Python based validation-api functions to JAVA pro
             </releases>
             <url>https://nexus.seamfix.com/nexus/content/groups/public</url>
         </repository>
+    </repositories>
 ```
 # Dependency (Gradle)
 ```groovy
-        implementation 'com.sf:icao-validation-java-bridge:1.0.0-SNAPSHOT'
+    implementation 'com.sf:icao-validation-java-bridge:1.0.0-SNAPSHOT'
 ```
 
 # How to use the Icao-Wrapper Library
 ```java
-        ICAOValidator validator = null;
-        try {
-            validator = new ICAOValidator("path/to/.ini/in the classifier_xml"); // Download this from the root of this repository
-            ImageDecision decision = validator.icaoValidate("path/to/image");
-            Map<String, ImageDecision.Property> map = decision.getPropertyMap();
-            ImageDecision.Property property = map.get("ImageDecision property key");
-            System.out.println(property.getIsValid());
-            System.out.println(property.getName());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+    ICAOValidator validator = null;
+    try {
+        validator = new ICAOValidator("path/to/.ini/in the classifier_xml"); // Download this from the root of this repository
+        String json = validator.validate("path/to/image");
+        System.out.println(json);
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
 ```
 
-# ImageDecision property keys
-* BACKGROUND_LIGHT
-* BRIGHTNESS_CONTRAST
-* EYE_GLASS
-* FACE_ALIGNED
-* FACE_BLUR
-* FACE_CENTERED
-* FACE_COVERED
-* IMAGE_DIMENSION
-* RED_EYE_DETECT
-* SHADOW_DETECTION
-* SHOULDER_EXISTS
-* SKIN_TONE
+# Sample Icao validation response
+```json
+
+```
+**Json Keys for the returned Json validation result**
+
+key | Value
+--- | ---
+validations | The list of validations
+name | Name of the Icao validation
+message | The message describing the result of the validation
+isValid | Boolean value that represents the state of the result
+value | The returned value that can be used to make decisions on the threshold used
+
